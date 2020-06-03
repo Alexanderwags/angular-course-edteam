@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { CoursesListComponent } from './courses-list/courses-list.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'sidenav',
     component: SidenavComponent,
+  },
+  {
+    path: 'courses',
+    component: CoursesListComponent,
   },
 ];
 

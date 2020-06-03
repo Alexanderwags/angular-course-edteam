@@ -7,6 +7,7 @@ import { EscuelaDigitalComponent } from './escuela-digital/escuela-digital.compo
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CoursesListComponent } from './courses-list/courses-list.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     EscuelaDigitalComponent,
     NavbarComponent,
     SidenavComponent,
-    DashboardComponent
+    DashboardComponent,
+    CoursesListComponent
   ],
   imports: [
     BrowserModule,
