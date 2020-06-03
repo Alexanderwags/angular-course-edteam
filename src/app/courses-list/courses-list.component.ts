@@ -31,16 +31,4 @@ export class CoursesListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  editarCurso(curso: any) {
-    console.log('Editar ', curso);
-  }
-  eliminarCurso(curso: any) {
-    console.log('Eliminar ', curso);
-  }
-  onMouseover($event) {
-    console.log('Mouse over ', $event);
-  }
-  onDobleClick($event) {
-    console.log('doble click ', $event);
-  }
 }

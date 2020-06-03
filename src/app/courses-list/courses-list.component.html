@@ -27,16 +27,7 @@
             <td>{{ item.price }}</td>
             <td>{{ item.rating }}</td>
             <td>
-              <span
-                (click)="editarCurso(item.name)"
-                (mouseover)="onMouseover($event)"
-                (dblclick)="onDobleClick($event)"
-              >
-                <li class="fa fa-edit"></li>
-              </span>
-              <span>
-                <li class="fa fa-trash"></li>
-              </span>
+              <app-course-action></app-course-action>
             </td>
           </tr>
         </tbody>
