@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "edteam-course-angular"
+    }
+  },
+  "defaultProject": "edteam-course-angular",
+  "cli": {
+    "analytics": false
+  }
 }
