@@ -3,7 +3,10 @@
     {{ titulo }}
   </div>
   <div class="body">
-    <div>
+    <div *ngIf="!cursos || cursos.length === 0" class="alert alert-info" role="alert">
+      A simple info alert—check it out!
+    </div>
+    <div *ngIf="cursos.length > 0">
       <table class="table">
         <thead>
           <th>Logo</th>
@@ -14,6 +17,7 @@
           <th>Rating</th>
           <th>Acciones</th>
         </thead>
+
         <tbody>
           <tr *ngFor="let item of cursos">
             <td><img [src]="item.imgUrl" /></td>
@@ -23,7 +27,11 @@
             <td>{{ item.price }}</td>
             <td>{{ item.rating }}</td>
             <td>
-              <span>
+              <span
+                (click)="editarCurso(item.name)"
+                (mouseover)="onMouseover($event)"
+                (dblclick)="onDobleClick($event)"
+              >
                 <li class="fa fa-edit"></li>
               </span>
               <span>
