@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EscuelaDigitalComponent } from './escuela-digital/escuela-digital.component';
@@ -9,6 +9,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CoursesListComponent } from './courses-list/courses-list.component';
 import { CourseActionComponent } from './course-action/course-action.component';
+import { CourseEditComponent } from './course-edit/course-edit.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,11 @@ import { CourseActionComponent } from './course-action/course-action.component';
     SidenavComponent,
     DashboardComponent,
     CoursesListComponent,
-    CourseActionComponent
+    CourseActionComponent,
+    CourseEditComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,10 +1,9 @@
-<span
-  (click)="editarCurso(0)"
-  (mouseover)="onMouseover($event)"
-  (dblclick)="onDobleClick($event)"
->
+<span (click)="editarCurso(curso)">
   <li class="fa fa-edit"></li>
 </span>
-<span>
+<span (click)="eliminarCurso(curso)">
   <li class="fa fa-trash"></li>
 </span>
+
+<!-- (mouseover)="onMouseover($event)"
+(dblclick)="onDobleClick($event)" -->

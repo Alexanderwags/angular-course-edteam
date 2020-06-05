@@ -6,6 +6,13 @@
     <div *ngIf="!cursos || cursos.length === 0" class="alert alert-info" role="alert">
       A simple info alert—check it out!
     </div>
+    <div class="row filtro">
+      <div class="col-md-2">Filtrar por:</div>
+      <div class="col-md-6">
+        <input #filtro type="text" [(ngModel)]="textofiltro" />
+        <span>{{ textofiltro }}</span>
+      </div>
+    </div>
     <div *ngIf="cursos.length > 0">
       <table class="table">
         <thead>
@@ -27,7 +34,11 @@
             <td>{{ item.price }}</td>
             <td>{{ item.rating }}</td>
             <td>
-              <app-course-action></app-course-action>
+              <app-course-action
+                [curso]="item"
+                (edit)="onEditCurso($event)"
+                (delete)="onDeleteCurso($event)"
+              ></app-course-action>
             </td>
           </tr>
         </tbody>
